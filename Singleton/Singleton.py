@@ -1,6 +1,6 @@
 class Singleton(object):
-    def __new__(cls):
-        if not hasattr(cls, 'instance'):
+    def __new__(cls): #instancia objeto
+        if not hasattr(cls, 'instance'): #verifica se o objeto ja existe
             cls.instance = super(Singleton, cls).__new__(cls)
         return cls.instance
 
